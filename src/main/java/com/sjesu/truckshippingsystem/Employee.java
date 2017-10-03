@@ -12,7 +12,7 @@ package com.sjesu.truckshippingsystem;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(namespace = "http://www.example.org/employee")
+@XmlType(namespace = "http://www.truckshippingsystem.org/employee")
 public class Employee {
     private String name;
     private int id;

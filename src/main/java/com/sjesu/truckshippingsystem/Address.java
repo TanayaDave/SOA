@@ -11,12 +11,37 @@ package com.sjesu.truckshippingsystem;
  */
 import javax.xml.bind.annotation.XmlType;
 
-@XmlType(namespace = "http://www.example.org/address")
+@XmlType(namespace = "http://www.truckshippingsystem.org/address")
 public class Address {
     private String city;
     private int zip;
     private String addressLine1;
-    private String addressLine2;
+    private String addressLine2;   
+    private String state;
+
+   
+   
+    
+    private String truckId;
+
+    /**
+     * Get the value of truckId
+     *
+     * @return the value of truckId
+     */
+    public String getTruckId() {
+        return truckId;
+    }
+
+    /**
+     * Set the value of truckId
+     *
+     * @param truckId new value of truckId
+     */
+    public void setTruckId(String truckId) {
+        this.truckId = truckId;
+    }
+
     public String getCity() {
         return city;
     }
@@ -40,6 +65,13 @@ public class Address {
     }
     public void setAddressLine2(String addressLine2) {
         this.addressLine2 = addressLine2;
+    }
+     public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
     
 }
