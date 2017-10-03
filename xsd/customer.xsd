@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:addrns="http://www.truckshippingsystem.org/address" xmlns:cntdetns="http://www.truckshippingsystem.org/contactdetails" targetNamespace="http://www.truckshippingsystem.org/customer" version="1.0">
+
+  <xs:import namespace="http://www.truckshippingsystem.org/address" schemaLocation="address.xsd"/>
+
+  <xs:import namespace="http://www.truckshippingsystem.org/contactdetails" schemaLocation="contactdetails.xsd"/>
+<xs:element name="customer">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="addrns:address"/>
+      <xs:element minOccurs="0" name="contactdetails" type="cntdetns:contactDetails"/>
+      <xs:element name="custId" type="xs:int"/>
+      <xs:element minOccurs="0" name="custName" type="xs:string"/>
+      <xs:element minOccurs="0" name="custTitle" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>

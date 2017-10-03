@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.truckshippingsystem.org/driver" version="1.0">
+    <xs:element name="driver">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="driverId" type="xs:int"/>
+      <xs:element minOccurs="0" name="driverLicNo" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverLicState" type="xs:string"/>
+      <xs:element minOccurs="0" name="driverName" type="xs:string"/>
+      <xs:element name="empId" type="xs:int"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  </xs:element>
+</xs:schema>

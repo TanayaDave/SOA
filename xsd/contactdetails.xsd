@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.truckshippingsystem.org/contactdetails" version="1.0">
+<xs:element name="contactDetails">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element minOccurs="0" name="altPhoneNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="cellNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="faxNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="phoneNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+</xs:schema>
