@@ -137,7 +137,7 @@
                         </transformSchema>                        
                     </transformSchemas>
                     <includes>
-                        <include>com/sjesu/truckshippingsystem/*</include>
+                        <include>com/truckshippingsystem/*</include>
                     </includes>
                     <verbose>true</verbose>
 

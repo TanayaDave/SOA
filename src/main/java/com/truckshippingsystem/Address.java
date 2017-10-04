@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.sjesu.truckshippingsystem;
+package com.truckshippingsystem;
 
 /**
  *
@@ -18,10 +18,6 @@ public class Address {
     private String addressLine1;
     private String addressLine2;   
     private String state;
-
-   
-   
-    
     private String truckId;
 
     /**
@@ -73,5 +69,12 @@ public class Address {
     public void setState(String state) {
         this.state = state;
     }
+
+    @Override
+    public String toString() {
+        return "Address{" + "city=" + city + ", zip=" + zip + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", state=" + state + ", truckId=" + truckId + '}';
+    }
+    
+    
     
 }
