@@ -3,40 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.truckshippingsystem;
+package com.truckshippingsystem.domain;
 
 /**
  *
  * @author shrikantjesu
  */
-import javax.xml.bind.annotation.XmlType;
+import javax.persistence.Embeddable;
 
-@XmlType(namespace = "http://www.truckshippingsystem.org/address")
+@Embeddable
 public class Address {
     private String city;
     private int zip;
     private String addressLine1;
     private String addressLine2;   
     private String state;
-    private String truckId;
-
-    /**
-     * Get the value of truckId
-     *
-     * @return the value of truckId
-     */
-    public String getTruckId() {
-        return truckId;
-    }
-
-    /**
-     * Set the value of truckId
-     *
-     * @param truckId new value of truckId
-     */
-    public void setTruckId(String truckId) {
-        this.truckId = truckId;
-    }
 
     public String getCity() {
         return city;
@@ -72,7 +53,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" + "city=" + city + ", zip=" + zip + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", state=" + state + ", truckId=" + truckId + '}';
+        return "Address{" + "city=" + city + ", zip=" + zip + ", addressLine1=" + addressLine1 + ", addressLine2=" + addressLine2 + ", state=" + state + '}';
     }
     
     

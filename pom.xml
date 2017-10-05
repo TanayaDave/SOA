@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.sjesu</groupId>
+    <groupId>com</groupId>
     <artifactId>TruckShippingSystem</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -12,9 +12,25 @@
     </properties>
     <dependencies>
         <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>5.1.39</version>
+        </dependency>
+        <dependency>
             <groupId>javax.xml.bind</groupId>
             <artifactId>jaxb-api</artifactId>
             <version>2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>org.eclipse.persistence.jpa.modelgen.processor</artifactId>
+            <version>2.5.2</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
@@ -28,121 +44,5 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-
-        <plugins>
-            <plugin>
-                <groupId>org.codehaus.mojo</groupId>
-                <artifactId>jaxb2-maven-plugin</artifactId>
-                <version>1.6</version>
-                <executions>
-                    <execution>
-                        <id>schemagen</id>
-                        <goals>
-                            <goal>schemagen</goal>
-                        </goals>
-                    </execution>
-                </executions>
-
-                <configuration>
-                    <transformSchemas>
-                        <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/employee</uri>
-                            <toPrefix>empns</toPrefix>
-                            <toFile>employee.xsd</toFile>
-                        </transformSchema>
-                        <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/address</uri>
-                            <toPrefix>addrns</toPrefix>
-                            <toFile>address.xsd</toFile>
-                        </transformSchema>
-                        <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/expense</uri>
-                            <toPrefix>expns</toPrefix>
-                            <toFile>expense.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/vehicles</uri>
-                            <toPrefix>vehns</toPrefix>
-                            <toFile>vehicles.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/truck</uri>
-                            <toPrefix>trckns</toPrefix>
-                            <toFile>truck.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/ticket</uri>
-                            <toPrefix>ticns</toPrefix>
-                            <toFile>ticket.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/payment</uri>
-                            <toPrefix>payns</toPrefix>
-                            <toFile>payment.xsd</toFile>
-                        </transformSchema>
-                        <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/customer</uri>
-                            <toPrefix>custns</toPrefix>
-                            <toFile>customer.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/maintenance</uri>
-                            <toPrefix>mntns</toPrefix>
-                            <toFile>maintenance.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/transaction</uri>
-                            <toPrefix>txnns</toPrefix>
-                            <toFile>transaction.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/order</uri>
-                            <toPrefix>odrns</toPrefix>
-                            <toFile>order.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/orderdetails</uri>
-                            <toPrefix>odrdetns</toPrefix>
-                            <toFile>orderdetails.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/invoice</uri>
-                            <toPrefix>invns</toPrefix>
-                            <toFile>invoice.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/location</uri>
-                            <toPrefix>locns</toPrefix>
-                            <toFile>location.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/driver</uri>
-                            <toPrefix>drvns</toPrefix>
-                            <toFile>driver.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/pricing</uri>
-                            <toPrefix>prcns</toPrefix>
-                            <toFile>pricing.xsd</toFile>
-                        </transformSchema>
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/comments</uri>
-                            <toPrefix>cmtns</toPrefix>
-                            <toFile>comments.xsd</toFile>
-                        </transformSchema> 
-                         <transformSchema>
-                            <uri>http://www.truckshippingsystem.org/contactdetails</uri>
-                            <toPrefix>cntdetns</toPrefix>
-                            <toFile>contactdetails.xsd</toFile>
-                        </transformSchema>                        
-                    </transformSchemas>
-                    <includes>
-                        <include>com/truckshippingsystem/*</include>
-                    </includes>
-                    <verbose>true</verbose>
-
-                </configuration>
-            </plugin>
-        </plugins>
     </build>
 </project>

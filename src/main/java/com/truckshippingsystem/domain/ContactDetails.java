@@ -3,22 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.truckshippingsystem;
+package com.truckshippingsystem.domain;
 
 /**
  *
  * @author user
  */
 
-import javax.xml.bind.annotation.XmlType;
+import javax.persistence.Embeddable;
 
-@XmlType(namespace = "http://www.truckshippingsystem.org/contactdetails")
+@Embeddable
 public class ContactDetails {
     
     private String phoneNumber;
-    private String cellNumber;
     private String altPhoneNumber;
-    private String faxNumber;
+    private Integer faxNumber;
     private String email;
 
     public String getPhoneNumber() {
@@ -29,14 +28,6 @@ public class ContactDetails {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getCellNumber() {
-        return cellNumber;
-    }
-
-    public void setCellNumber(String cellNumber) {
-        this.cellNumber = cellNumber;
-    }
-
     public String getAltPhoneNumber() {
         return altPhoneNumber;
     }
@@ -45,11 +36,11 @@ public class ContactDetails {
         this.altPhoneNumber = altPhoneNumber;
     }
 
-    public String getFaxNumber() {
+    public Integer getFaxNumber() {
         return faxNumber;
     }
 
-    public void setFaxNumber(String faxNumber) {
+    public void setFaxNumber(Integer faxNumber) {
         this.faxNumber = faxNumber;
     }
 
@@ -60,9 +51,10 @@ public class ContactDetails {
     public void setEmail(String email) {
         this.email = email;
     }
-   
-    
-    
-    
+
+    @Override
+    public String toString() {
+        return "ContactDetails{" + "phoneNumber=" + phoneNumber + ", altPhoneNumber=" + altPhoneNumber + ", faxNumber=" + faxNumber + ", email=" + email + '}';
+    }
     
 }

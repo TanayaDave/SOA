@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.truckshippingsystem;
+package com.truckshippingsystem.domain;
 
 /**
  *
@@ -11,12 +11,7 @@ package com.truckshippingsystem;
  */
 import java.util.Date;
 import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
 
-
-
-@XmlType(namespace = "http://www.example.org/employee")
 public class EmployeeTEst {
 
     
