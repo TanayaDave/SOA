@@ -13,14 +13,12 @@ import com.truckshippingsystem.domain.Address;
 import com.truckshippingsystem.domain.ContactDetails;
 import com.truckshippingsystem.domain.Employee;
 import com.truckshippingsystem.services.EntityWrapperService;
+import com.truckshippingsystem.services.Utility;
 import java.io.File;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
+import java.io.IOException;
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
-import javax.persistence.Persistence;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
@@ -30,28 +28,16 @@ import org.xml.sax.helpers.DefaultHandler;
 
 public class EmployeeParser {
 
-    public static void main(String[] args) {
+    public static void ParseEmployee() {
 
         try {
-            File inputFile = new File(".//xsd//Employees.xml");
-            SAXParserFactory factory = SAXParserFactory.newInstance();
-            SAXParser saxParser = factory.newSAXParser();
+            File inputFile = new File(".//XML//Employees.xml");
+            SAXParser saxParser = Utility.getSAXParserObject();
             UserHandler userhandler = new UserHandler();
             saxParser.parse(inputFile, userhandler);
-        } catch (Exception e) {
+        } catch (ParserConfigurationException | SAXException | IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public static Date formatDate(String date) {
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
-        Date formattedDate = new Date();
-        try {
-            formattedDate = sdf.parse(date);
-        } catch (ParseException e) {
-            System.out.println(e.getStackTrace());
-        }
-        return formattedDate;
     }
 }
 
@@ -159,11 +145,11 @@ class UserHandler extends DefaultHandler {
             bSSN = false;
         } else if (bDOB) {
             System.out.println("DOB: " + new String(ch, start, length));
-            employee.setDob(EmployeeParser.formatDate(new String(ch, start, length)));
+            employee.setDob(Utility.formatDate(new String(ch, start, length)));
             bDOB = false;
         } else if (bDateHired) {
             System.out.println("DateHired: " + new String(ch, start, length));
-            employee.setDateHired(EmployeeParser.formatDate(new String(ch, start, length)));
+            employee.setDateHired(Utility.formatDate(new String(ch, start, length)));
             bDateHired = false;
         } else if (bAddressLine1) {
             employee.getAddress().setAddressLine1(new String(ch, start, length));

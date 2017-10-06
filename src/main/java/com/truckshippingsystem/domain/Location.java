@@ -16,8 +16,7 @@ public class Location {
     private String locName;
     private int custId;
     private int locCode;
-    private Address address;
-    private ContactDetails contactdetails;
+   
 
     public int getLocCode() {
         return locCode;
@@ -27,22 +26,6 @@ public class Location {
         this.locCode = locCode;
     }
 
-    public Address getAddress() {
-        return address;
-    }
-
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public ContactDetails getContactdetails() {
-        return contactdetails;
-    }
-
-    public void setContactdetails(ContactDetails contactdetails) {
-        this.contactdetails = contactdetails;
-    }
-    
     public int getLocId() {
         return locId;
     }
