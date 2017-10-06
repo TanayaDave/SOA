@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Drivers (Driver)*>
+<!ATTLIST Drivers
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Driver (DriverName|DriverLicenseNo|DriverLicenseState|DriverType)*>
+<!ATTLIST Driver
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT DriverName (#PCDATA)>
+
+<!ELEMENT DriverLicenseNo (#PCDATA)>
+
+<!ELEMENT DriverLicenseState (#PCDATA)>
+
+<!ELEMENT DriverType (#PCDATA)>

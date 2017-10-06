@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Customers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">>
+	<Customer id="001" >
+		<CustTitle>Mr</CustTitle>
+  		<CustFirstName>Larry</CustFirstName>
+  		<CustLastName>Mark</CustLastName>  			  		  		
+  		<Address>
+   			<AddressLine1>3388 S King Drive</AddressLine1>
+    		<AddressLine2>House 56</AddressLine2>
+    		<City>Chicago</City>
+    		<State>Illinois</State>   
+    		<Zip>605877</Zip>
+  		</Address>  
+  		<ContactDetails>
+  			<PhoneNumber>1234567890</PhoneNumber>
+  			<AltPhoneNumber>9874563201</AltPhoneNumber>
+  			<Email>larry.mark@abc.com</Email>  
+  			<FaxNumber>1235647890</FaxNumber>  			
+  		</ContactDetails>
+  		<Order id="001">		
+			<EmployeeId>001</EmployeeId>
+			<OrderDate>01-02-2017</OrderDate>
+			<UnitCost>18000</UnitCost>
+			<Qnty>2</Qnty>
+			<LocId>001</LocId>
+			<TruckId>001</TruckId>
+			<TotalAmount>360000</TotalAmount>	
+		</Order>
+		<Order id="002">		
+			<EmployeeId>001</EmployeeId>
+			<OrderDate>01-02-2017</OrderDate>
+			<UnitCost>18000</UnitCost>
+			<Qnty>2</Qnty>
+			<LocId>001</LocId>
+			<TruckId>001</TruckId>
+			<TotalAmount>3600</TotalAmount>	
+		</Order>
+	</Customer>
+	<Customer id="002">
+  		<CustTitle>Mr</CustTitle>
+  		<CustFirstName>Kevin</CustFirstName>
+  		<CustLastName>Hope</CustLastName>  
+  		<Address>
+   			<AddressLine1>410 State Street</AddressLine1>
+    		<AddressLine2>Apt 658</AddressLine2>
+    		<City>Chicago</City>
+    		<State>Illinois</State>   
+    		<Zip>606897</Zip>
+  		</Address>  
+  		<ContactDetails>
+  			<PhoneNumber>5678894522</PhoneNumber>
+  			<AltPhoneNumber>9874567899</AltPhoneNumber>
+  			<Email>kevin.hope@gmail.com</Email>  
+  			<FaxNumber>12356541230</FaxNumber>  			
+  		</ContactDetails>
+  		<Order id="001">		
+			<EmployeeId>001</EmployeeId>
+			<OrderDate>01-02-2017</OrderDate>
+			<UnitCost>18000</UnitCost>
+			<Qnty>2</Qnty>
+			<LocId>001</LocId>
+			<TruckId>001</TruckId>
+			<TotalAmount>360000</TotalAmount>	
+		</Order>
+	</Customer>
+</Customers>
+

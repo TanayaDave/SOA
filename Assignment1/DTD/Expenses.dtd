@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Expenses (Expense)*>
+<!ATTLIST Expenses
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Expense (Category|Desc|Amount|Date|PaymentType|EmpId)*>
+<!ATTLIST Expense
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT Category (#PCDATA)>
+
+<!ELEMENT Desc (#PCDATA)>
+
+<!ELEMENT Amount (#PCDATA)>
+
+<!ELEMENT Date (#PCDATA)>
+
+<!ELEMENT PaymentType (#PCDATA)>
+
+<!ELEMENT EmpId (#PCDATA)>

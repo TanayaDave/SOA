@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Payments (Payment)*>
+<!ATTLIST Payments
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Payment (OrderId|Amount|Date|Type|CardNo|ExpiryDate)*>
+<!ATTLIST Payment
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT OrderId (#PCDATA)>
+
+<!ELEMENT Amount (#PCDATA)>
+
+<!ELEMENT Date (#PCDATA)>
+
+<!ELEMENT Type (#PCDATA)>
+
+<!ELEMENT CardNo (#PCDATA)>
+
+<!ELEMENT ExpiryDate (#PCDATA)>

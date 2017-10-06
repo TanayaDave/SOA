@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Vehicles (Vehicle)*>
+<!ATTLIST Vehicles
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Vehicle (VehicleMake|Vin|Model|Color|Year|LicensePlateNo|CustId|OrderId)*>
+<!ATTLIST Vehicle
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT VehicleMake (#PCDATA)>
+
+<!ELEMENT Vin (#PCDATA)>
+
+<!ELEMENT Model (#PCDATA)>
+
+<!ELEMENT Color (#PCDATA)>
+
+<!ELEMENT Year (#PCDATA)>
+
+<!ELEMENT LicensePlateNo (#PCDATA)>
+
+<!ELEMENT CustId (#PCDATA)>
+
+<!ELEMENT OrderId (#PCDATA)>

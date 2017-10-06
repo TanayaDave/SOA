@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">       
+         <xs:element name="employees">
+               <xs:complexType mixed="true">
+                     <xs:sequence>
+                           <xs:element name="employee" maxOccurs="unbounded">
+                                 <xs:complexType>
+                                       <xs:sequence>
+                                             <xs:element name="EmpFirstName" type="xs:string"></xs:element>
+                                             <xs:element name="EmpLastName" type="xs:string"></xs:element>
+                                             <xs:element name="Role" type="xs:string"></xs:element>
+                                             <xs:element name="SSN" type="xs:string"></xs:element>
+                                             <xs:element name="DateOfBirth" type="xs:string"></xs:element>
+                                             <xs:element name="DateHired" type="xs:string"></xs:element>
+                                             <xs:element name="Address">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="AddressLine1" type="xs:string"></xs:element>
+                                                               <xs:element name="AddressLine2" type="xs:string"></xs:element>
+                                                               <xs:element name="City" type="xs:string"></xs:element>
+                                                               <xs:element name="State" type="xs:string"></xs:element>
+                                                               <xs:element name="Zip" type="xs:int"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                             <xs:element name="ContactDetails">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+														 <xs:element name="PhoneNumber">
+                                                               <xs:simpleType>
+																	<xs:restriction base="xs:string">
+																	<xs:pattern value="\d{10}"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															   </xs:element>
+                                                               <xs:element name="AltPhoneNumber" type="xs:integer"></xs:element>
+                                                               <xs:element name="Email">
+																	<xs:simpleType>
+																	<xs:restriction base="xs:string">
+																	<xs:pattern value="[^@]+@[^\.]+\..+"/>
+																	</xs:restriction>
+																</xs:simpleType>
+															   </xs:element>
+                                                               <xs:element name="FaxNumber" type="xs:integer"></xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                       <xs:attribute name="id" type="xs:int"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>                    
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+ 

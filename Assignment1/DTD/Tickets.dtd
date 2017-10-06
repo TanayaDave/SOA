@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Tickets (Ticket)*>
+<!ATTLIST Tickets
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Ticket (Date|Fine|Desc|isPaid)*>
+<!ATTLIST Ticket
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT Date (#PCDATA)>
+
+<!ELEMENT Fine (#PCDATA)>
+
+<!ELEMENT Desc (#PCDATA)>
+
+<!ELEMENT isPaid (#PCDATA)>

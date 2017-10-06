@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Maintenances (Maintenance)*>
+<!ATTLIST Maintenances
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Maintenance (Date|Cost|Description|Status)*>
+<!ATTLIST Maintenance
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT Date (#PCDATA)>
+
+<!ELEMENT Cost (#PCDATA)>
+
+<!ELEMENT Description (#PCDATA)>
+
+<!ELEMENT Status (#PCDATA)>

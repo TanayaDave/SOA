@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Transactions (Transaction)*>
+<!ATTLIST Transactions
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Transaction (OrderId|PriceId|EmployeeId|Date|Amount)*>
+<!ATTLIST Transaction
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT OrderId (#PCDATA)>
+
+<!ELEMENT PriceId (#PCDATA)>
+
+<!ELEMENT EmployeeId (#PCDATA)>
+
+<!ELEMENT Date (#PCDATA)>
+
+<!ELEMENT Amount (#PCDATA)>

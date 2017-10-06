@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Comments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Comment id="001">
+		<Date>10-05-2017</Date>
+		<Time>01:05:00</Time>
+		<Type>Feedback</Type>
+		<Comment>Best services</Comment>
+		<CustId>001</CustId>
+	</Comment>
+	<Comment id="002">
+		<Date>10-05-2017</Date>
+		<Time>01:15:00</Time>
+		<Type>Complaint</Type>
+		<Comment>Late Delivery</Comment>
+		<CustId>002</CustId>
+	</Comment>
+</Comments>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">        
+         <xs:element name="Trucks">
+               <xs:complexType>
+                     <xs:sequence>
+                           <xs:element name="Truck" maxOccurs="unbounded">
+                                 <xs:complexType mixed="true">
+                                       <xs:sequence>
+                                             <xs:element name="TruckMake" type="xs:string"></xs:element>
+                                             <xs:element name="Vin" type="xs:string"></xs:element>
+                                             <xs:element name="Color" type="xs:string"></xs:element>
+                                             <xs:element name="Year" type="xs:int"></xs:element>
+                                             <xs:element name="Capacity" type="xs:int"></xs:element>
+                                             <xs:element name="Type" type="xs:string"></xs:element>
+                                             <xs:element name="LicensePlateNo" type="xs:string"></xs:element>
+                                             <xs:element name="Drivers">
+                                                   <xs:complexType>
+                                                         <xs:sequence>
+                                                               <xs:element name="Driver" maxOccurs="unbounded">
+                                                                     <xs:complexType>
+                                                                           <xs:sequence>
+                                                                                 <xs:element name="DriverName" type="xs:string"></xs:element>
+                                                                                 <xs:element name="DriverLicenseNo" type="xs:string"></xs:element>
+                                                                                 <xs:element name="DriverLicenseState" type="xs:string"></xs:element>
+                                                                                 <xs:element name="DriverType" type="xs:string"></xs:element>
+                                                                           </xs:sequence>
+                                                                           <xs:attribute name="id" type="xs:int"></xs:attribute>
+                                                                     </xs:complexType>
+                                                               </xs:element>
+                                                         </xs:sequence>
+                                                   </xs:complexType>
+                                             </xs:element>
+                                       </xs:sequence>
+                                       <xs:attribute name="id" type="xs:int"></xs:attribute>
+                                 </xs:complexType>
+                           </xs:element>
+                     </xs:sequence>                     
+               </xs:complexType>
+         </xs:element>
+   </xs:schema>
+ 

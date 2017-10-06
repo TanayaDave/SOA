@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT employees (#PCDATA|employee)*>
+<!ATTLIST employees
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT employee (EmpFirstName|EmpLastName|Role|SSN|DateOfBirth|DateHired|Address|ContactDetails)*>
+<!ATTLIST employee
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT EmpFirstName (#PCDATA)>
+
+<!ELEMENT EmpLastName (#PCDATA)>
+
+<!ELEMENT Role (#PCDATA)>
+
+<!ELEMENT SSN (#PCDATA)>
+
+<!ELEMENT DateOfBirth (#PCDATA)>
+
+<!ELEMENT DateHired (#PCDATA)>
+
+<!ELEMENT Address (AddressLine1|AddressLine2|City|State|Zip)*>
+
+<!ELEMENT AddressLine1 (#PCDATA)>
+
+<!ELEMENT AddressLine2 (#PCDATA)>
+
+<!ELEMENT City (#PCDATA)>
+
+<!ELEMENT State (#PCDATA)>
+
+<!ELEMENT Zip (#PCDATA)>
+
+<!ELEMENT ContactDetails (PhoneNumber|AltPhoneNumber|Email|FaxNumber)*>
+
+<!ELEMENT PhoneNumber (#PCDATA)>
+
+<!ELEMENT AltPhoneNumber (#PCDATA)>
+
+<!ELEMENT Email (#PCDATA)>
+
+<!ELEMENT FaxNumber (#PCDATA)>

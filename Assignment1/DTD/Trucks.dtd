@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Trucks (Truck)*>
+<!ATTLIST Trucks
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Truck (TruckMake|Vin|Color|Year|Capacity|Type|LicensePlateNo|Drivers)*>
+<!ATTLIST Truck
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT TruckMake (#PCDATA)>
+
+<!ELEMENT Vin (#PCDATA)>
+
+<!ELEMENT Color (#PCDATA)>
+
+<!ELEMENT Year (#PCDATA)>
+
+<!ELEMENT Capacity (#PCDATA)>
+
+<!ELEMENT Type (#PCDATA)>
+
+<!ELEMENT LicensePlateNo (#PCDATA)>
+
+<!ELEMENT Drivers (Driver)*>
+
+<!ELEMENT Driver (DriverName|DriverLicenseNo|DriverLicenseState|DriverType)*>
+<!ATTLIST Driver
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT DriverName (#PCDATA)>
+
+<!ELEMENT DriverLicenseNo (#PCDATA)>
+
+<!ELEMENT DriverLicenseState (#PCDATA)>
+
+<!ELEMENT DriverType (#PCDATA)>

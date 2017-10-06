@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Comments (Comment)*>
+<!ATTLIST Comments
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+
+<!ELEMENT Comment (#PCDATA|Date|Time|Type|Comment|CustId)*>
+<!ATTLIST Comment
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT Date (#PCDATA)>
+
+<!ELEMENT Time (#PCDATA)>
+
+<!ELEMENT Type (#PCDATA)>
+
+<!ELEMENT CustId (#PCDATA)>

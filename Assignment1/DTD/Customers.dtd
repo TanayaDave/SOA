@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Customers (#PCDATA|Customer)*>
+<!ATTLIST Customers
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Customer (CustTitle|CustFirstName|CustLastName|Address|ContactDetails|Order)*>
+<!ATTLIST Customer
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT CustTitle (#PCDATA)>
+
+<!ELEMENT CustFirstName (#PCDATA)>
+
+<!ELEMENT CustLastName (#PCDATA)>
+
+<!ELEMENT Address (AddressLine1|AddressLine2|City|State|Zip)*>
+
+<!ELEMENT AddressLine1 (#PCDATA)>
+
+<!ELEMENT AddressLine2 (#PCDATA)>
+
+<!ELEMENT City (#PCDATA)>
+
+<!ELEMENT State (#PCDATA)>
+
+<!ELEMENT Zip (#PCDATA)>
+
+<!ELEMENT ContactDetails (PhoneNumber|AltPhoneNumber|Email|FaxNumber)*>
+
+<!ELEMENT PhoneNumber (#PCDATA)>
+
+<!ELEMENT AltPhoneNumber (#PCDATA)>
+
+<!ELEMENT Email (#PCDATA)>
+
+<!ELEMENT FaxNumber (#PCDATA)>
+
+<!ELEMENT Order (EmployeeId|OrderDate|UnitCost|Qnty|LocId|TruckId|TotalAmount)*>
+<!ATTLIST Order
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT EmployeeId (#PCDATA)>
+
+<!ELEMENT OrderDate (#PCDATA)>
+
+<!ELEMENT UnitCost (#PCDATA)>
+
+<!ELEMENT Qnty (#PCDATA)>
+
+<!ELEMENT LocId (#PCDATA)>
+
+<!ELEMENT TruckId (#PCDATA)>
+
+<!ELEMENT TotalAmount (#PCDATA)>

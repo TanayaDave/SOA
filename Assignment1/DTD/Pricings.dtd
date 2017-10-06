@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Pricings (Pricing)*>
+<!ATTLIST Pricings
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Pricing (LocIdFrom|LocIdTo|LocCodeFrom|LocCodeTo|LocNameFrom|LocNameTo|CustId)*>
+<!ATTLIST Pricing
+    id CDATA #IMPLIED
+  >
+<!ELEMENT LocIdFrom (#PCDATA)>
+
+<!ELEMENT LocIdTo (#PCDATA)>
+
+<!ELEMENT LocCodeFrom (#PCDATA)>
+
+<!ELEMENT LocCodeTo (#PCDATA)>
+
+<!ELEMENT LocNameFrom (#PCDATA)>
+
+<!ELEMENT LocNameTo (#PCDATA)>
+
+<!ELEMENT CustId (#PCDATA)>

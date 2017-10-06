@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Invoices (Invoice)*>
+<!ATTLIST Invoices
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Invoice (OrderId|CustId|LocId|Total|Date)*>
+<!ATTLIST Invoice
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT OrderId (#PCDATA)>
+
+<!ELEMENT CustId (#PCDATA)>
+
+<!ELEMENT LocId (#PCDATA)>
+
+<!ELEMENT Total (#PCDATA)>
+
+<!ELEMENT Date (#PCDATA)>

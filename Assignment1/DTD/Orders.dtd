@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT Orders (Order)*>
+<!ATTLIST Orders
+    xmlns:xsi CDATA #IMPLIED
+  >
+
+<!ELEMENT Order (CustId|EmployeeId|OrderDate|UnitCost|Qnty|LocId|TruckId|TotalAmount)*>
+<!ATTLIST Order
+    id CDATA #IMPLIED
+  >
+
+<!ELEMENT CustId (#PCDATA)>
+
+<!ELEMENT EmployeeId (#PCDATA)>
+
+<!ELEMENT OrderDate (#PCDATA)>
+
+<!ELEMENT UnitCost (#PCDATA)>
+
+<!ELEMENT Qnty (#PCDATA)>
+
+<!ELEMENT LocId (#PCDATA)>
+
+<!ELEMENT TruckId (#PCDATA)>
+
+<!ELEMENT TotalAmount (#PCDATA)>
