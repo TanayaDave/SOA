@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Payments xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Payment id="001">
+		<OrderId>001</OrderId>
+		<Amount>2000</Amount>		
+		<Date>01-01-2017</Date>
+		<Type>Credit Card</Type>
+		<CardNo>1234567890</CardNo>
+		<ExpiryDate>02-05-2020</ExpiryDate>
+	</Payment>
+	<Payment id="002">
+		<OrderId>002</OrderId>
+		<Amount>2000</Amount>
+		<Date>01-01-2016</Date>
+		<Type>Credit Card</Type>
+		<CardNo>1234578490</CardNo>
+		<ExpiryDate>02-05-2020</ExpiryDate>
+	</Payment>
+</Payments>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locations xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Location id="001">
+		<LocName>New York</LocName>
+		<LocCode>NY001</LocCode>
+		<CustId>001</CustId>
+		<Address>
+   			<AddressLine1>5252 Manhattan</AddressLine1>
+    		<AddressLine2>Big Apple</AddressLine2>
+    		<City>New York City</City>
+    		<State>New York</State>   
+    		<Zip>3124584</Zip>
+  		</Address>  
+  		<ContactDetails>
+  			<PhoneNumber>1234567890</PhoneNumber>
+  			<AltPhoneNumber>9874563201</AltPhoneNumber>
+  			<Email>nyc001@abc.com</Email>  
+  			<FaxNumber>1235647890</FaxNumber>  			
+  		</ContactDetails>
+	</Location>
+	<Location id="002">
+		<LocName>San Diego</LocName>
+		<LocCode>SD001</LocCode>
+		<CustId>001</CustId>
+		<Address>
+   			<AddressLine1>3251 Pier</AddressLine1>
+    		<AddressLine2>Peach Beach</AddressLine2>
+    		<City>San Diego</City>
+    		<State>California</State>   
+    		<Zip>54233</Zip>
+  		</Address>  
+  		<ContactDetails>
+  			<PhoneNumber>1234567890</PhoneNumber>
+  			<AltPhoneNumber>9874563201</AltPhoneNumber>
+  			<Email>sd001@abc.com</Email>  
+  			<FaxNumber>1235647890</FaxNumber>  			
+  		</ContactDetails>
+	</Location>
+</Locations>

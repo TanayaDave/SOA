@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">>
+	<employee id="001" >
+  		<EmpFirstName>Larry</EmpFirstName>
+  		<EmpLastName>Mark</EmpLastName>  			
+  		<Role>Driver</Role>
+  		<SSN>401-62-1422</SSN>
+  		<DateOfBirth>10-02-1959</DateOfBirth>
+  		<DateHired>05-08-2000</DateHired>
+  		<Address>
+   			<AddressLine1>3388 S King Drive</AddressLine1>
+    		<AddressLine2>House 56</AddressLine2>
+    		<City>Chicago</City>
+    		<State>Illinois</State>   
+    		<Zip>605877</Zip>
+  		</Address>  
+  		<ContactDetails>
+  			<PhoneNumber>1234567890</PhoneNumber>
+  			<AltPhoneNumber>9874563201</AltPhoneNumber>
+  			<Email>larry.mark@abc.com</Email>  
+  			<FaxNumber>1235647890</FaxNumber>  			
+  		</ContactDetails>
+	</employee>
+	<employee id="002">
+  		<EmpFirstName>Kevin</EmpFirstName>
+  		<EmpLastName>Hope</EmpLastName>  			
+  		<Role>Clerk</Role>
+  		<SSN>401-62-8722</SSN>
+  		<DateOfBirth>07-02-1990</DateOfBirth>
+  		<DateHired>05-08-2005</DateHired>
+  		<Address>
+   			<AddressLine1>410 State Street</AddressLine1>
+    		<AddressLine2>Apt 658</AddressLine2>
+    		<City>Chicago</City>
+    		<State>Illinois</State>   
+    		<Zip>606897</Zip>
+  		</Address>  
+  		<ContactDetails>
+  			<PhoneNumber>5678894522</PhoneNumber>
+  			<AltPhoneNumber>9874567899</AltPhoneNumber>
+  			<Email>kevin.hope@gmail.com</Email>  
+  			<FaxNumber>12356541230</FaxNumber>  			
+  		</ContactDetails>
+	</employee>
+</employees>
+
