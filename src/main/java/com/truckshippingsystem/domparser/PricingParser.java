@@ -5,7 +5,6 @@ package com.truckshippingsystem.domparser;
  * @author Manish Vishwakarma
  */
 import com.truckshippingsystem.domain.Pricing;
-import com.truckshippingsystem.domain.Vehicles;
 import com.truckshippingsystem.services.EntityWrapperService;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
@@ -108,10 +107,4 @@ public class PricingParser {
         em.persist(pricing);
         transc.commit();
     }
-
-    public static void main(String argv[]) {
-        PricingParser pricing = new PricingParser();
-        pricing.pricingParse();
-    }
-
 }

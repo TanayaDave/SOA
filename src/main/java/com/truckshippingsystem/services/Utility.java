@@ -20,7 +20,7 @@ import org.xml.sax.SAXException;
 public class Utility {
 
     public static Date formatDate(String date) {
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
         Date formattedDate = new Date();
         try {
             formattedDate = sdf.parse(date);

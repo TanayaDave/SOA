@@ -165,10 +165,4 @@ public class TruckParser {
             }
         transc.commit();
     }
-
-    public static void main(String argv[]) {
-        TruckParser truck = new TruckParser();
-        truck.truckParse();
-    }
-
 }

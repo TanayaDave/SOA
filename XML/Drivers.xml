@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Drivers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	 <Driver id ="001">
-	  	<DriverName>John</DriverName>
-      	<DriverLicenseNo>S530-4609-6283</DriverLicenseNo>
-      	<DriverLicenseState>Illinois</DriverLicenseState>
-      <DriverType>Contract</DriverType>
-      </Driver>
-      <Driver id="002">                   
-      	<DriverName>Harry</DriverName>
-      	<DriverLicenseNo>S530-4609-6278</DriverLicenseNo>
-      	<DriverLicenseState>Illinois</DriverLicenseState>
-      	<DriverType>Contract</DriverType>
-      </Driver>
+    <Driver id ="001">
+        <DriverName>John</DriverName>
+        <DriverLicenseNo>S530-4609-6283</DriverLicenseNo>
+        <DriverLicenseState>Illinois</DriverLicenseState>
+        <DriverType>Contract</DriverType>
+    </Driver>
+    <Driver id="002">                   
+        <DriverName>Harry</DriverName>
+        <DriverLicenseNo>S530-4609-6278</DriverLicenseNo>
+        <DriverLicenseState>Illinois</DriverLicenseState>
+        <DriverType>Contract</DriverType>
+    </Driver>
 </Drivers>

@@ -51,7 +51,7 @@
   			<PhoneNumber>5678894522</PhoneNumber>
   			<AltPhoneNumber>9874567899</AltPhoneNumber>
   			<Email>kevin.hope@gmail.com</Email>  
-  			<FaxNumber>12356541230</FaxNumber>  			
+  			<FaxNumber>123567890</FaxNumber>  			
   		</ContactDetails>
   		<Order id="001">		
 			<EmployeeId>001</EmployeeId>

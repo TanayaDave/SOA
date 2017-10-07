@@ -14,13 +14,10 @@ import com.truckshippingsystem.services.EntityWrapperService;
 import com.truckshippingsystem.services.Utility;
 import java.io.File;
 import java.io.IOException;
-import java.sql.Time;
-import java.text.SimpleDateFormat;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -69,7 +66,7 @@ class CommentsHandler extends DefaultHandler {
             bTime = true;
         } else if (qName.equalsIgnoreCase("Type")) {
             bType = true;
-        } else if (qName.equalsIgnoreCase("Desc")) {
+        } else if (qName.equalsIgnoreCase("Description")) {
             bDesc = true;
         } else if (qName.equalsIgnoreCase("CustId")) {
             bCustId = true;
@@ -81,7 +78,6 @@ class CommentsHandler extends DefaultHandler {
             String localName, String qName) throws SAXException {
 
         if (qName.equalsIgnoreCase("comment")) {
-            System.out.println("End Element :" + comment.toString());
             EntityManager em = EntityWrapperService.createEntityManager();
             EntityTransaction transc = em.getTransaction();
             transc.begin();
@@ -109,7 +105,7 @@ class CommentsHandler extends DefaultHandler {
             bType = false;
         } else if (bDesc) {
             System.out.println("Desc: " + new String(ch, start, length));
-            comment.setDesc(new String(ch, start, length));
+            comment.setDescription(new String(ch, start, length));
             bDesc = false;
         } else if (bCustId) {
             System.out.println("Customer Id: " + new String(ch, start, length));

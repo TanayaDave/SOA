@@ -7,7 +7,7 @@ package com.truckshippingsystem.domain;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.annotation.Generated;
+import javax.persistence.CascadeType;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,22 +25,46 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int custId;
-    private String custName;
+    private String custFirstName;
     private String custTitle;
+    private String custLastName;
     @Embedded
     private Address address;
     @Embedded
     private ContactDetails contactdetails;
 
-    @OneToMany(mappedBy = "customer")
+    @OneToMany(mappedBy = "customer",cascade = CascadeType.PERSIST)
     List<Order> orders = new ArrayList<>();
 
-    public String getCustName() {
-        return custName;
+    public void addOrders(Order order) {
+        this.orders.add(order);
+        order.setCustomer(this);
     }
 
-    public void setCustName(String custName) {
-        this.custName = custName;
+    /**
+     * Get the value of custLastName
+     *
+     * @return the value of custLastName
+     */
+    public String getCustLastName() {
+        return custLastName;
+    }
+
+    /**
+     * Set the value of custLastName
+     *
+     * @param custLastName new value of custLastName
+     */
+    public void setCustLastName(String custLastName) {
+        this.custLastName = custLastName;
+    }
+
+    public String getCustFirstName() {
+        return custFirstName;
+    }
+
+    public void setCustFirstName(String custFirstName) {
+        this.custFirstName = custFirstName;
     }
 
     public int getCustId() {

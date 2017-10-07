@@ -16,7 +16,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -32,7 +31,6 @@ public class Truck {
     private String type;
     private String licPlateNo;
     private String make;
-    private String model;
     private String year;
     @OneToMany(mappedBy = "truck")
     private List<Drivers> drivers = new ArrayList<>();
@@ -45,7 +43,7 @@ public class Truck {
     public Truck() {
     }
 
-    public Truck(int id, String vin, String color, int capacity, String type, String licPlateNo, String make, String model, String year) {
+    public Truck(int id, String vin, String color, int capacity, String type, String licPlateNo, String make, String year) {
         this.id = id;
         this.vin = vin;
         this.color = color;
@@ -53,7 +51,6 @@ public class Truck {
         this.type = type;
         this.licPlateNo = licPlateNo;
         this.make = make;
-        this.model = model;
         this.year = year;
     }
 
@@ -113,14 +110,6 @@ public class Truck {
         this.make = make;
     }
 
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
-    }
-
     public String getYear() {
         return year;
     }
@@ -139,7 +128,7 @@ public class Truck {
 
     @Override
     public String toString() {
-        return "Truck{" + "id=" + id + ", vin=" + vin + ", color=" + color + ", capacity=" + capacity + ", type=" + type + ", licPlateNo=" + licPlateNo + ", make=" + make + ", model=" + model + ", year=" + year + ", drivers=" + drivers + '}';
+        return "Truck{" + "id=" + id + ", vin=" + vin + ", color=" + color + ", capacity=" + capacity + ", type=" + type + ", licPlateNo=" + licPlateNo + ", make=" + make + ", year=" + year + ", drivers=" + drivers + '}';
     }
 
 }

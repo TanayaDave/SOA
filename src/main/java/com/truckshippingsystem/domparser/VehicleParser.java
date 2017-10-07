@@ -4,7 +4,6 @@ package com.truckshippingsystem.domparser;
  *
  * @author Manish Vishwakarma
  */
-import com.truckshippingsystem.domain.Drivers;
 import com.truckshippingsystem.domain.Vehicles;
 import com.truckshippingsystem.services.EntityWrapperService;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -14,9 +13,6 @@ import org.w3c.dom.NodeList;
 import org.w3c.dom.Node;
 import org.w3c.dom.Element;
 import java.io.File;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
@@ -119,10 +115,4 @@ public class VehicleParser {
 
         transc.commit();
     }
-
-    public static void main(String argv[]) {
-        VehicleParser vehicle = new VehicleParser();
-        vehicle.vehicleParse();
-    }
-
 }

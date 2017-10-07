@@ -5,19 +5,32 @@
  */
 package com.truckshippingsystem.domain;
 
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 /**
  *
  * @author user
  */
 
+@Entity
 public class Expense {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int expId;
     private String category;
+    @Column(name = "Description")
     private String desc;
     private double amount;
-    private String date;
-    private int mainId;
+    @Temporal(TemporalType.DATE)
+    private Date date;
     private int empId;
     private String paymentType;
 
@@ -53,20 +66,12 @@ public class Expense {
         this.amount = amount;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
-    }
-
-    public int getMainId() {
-        return mainId;
-    }
-
-    public void setMainId(int mainId) {
-        this.mainId = mainId;
     }
 
     public int getEmpId() {

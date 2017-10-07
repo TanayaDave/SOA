@@ -5,7 +5,6 @@
  */
 package com.truckshippingsystem.domain;
 
-import java.sql.Time;
 import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -32,7 +31,6 @@ public class Comments {
     @Temporal(TemporalType.DATE)
     private Date time;
 
-    
     private String type;
     private String description;
     private int custId;
@@ -63,10 +61,6 @@ public class Comments {
         this.time = time;
     }
     
-    
-
-   
-
     public String getType() {
         return type;
     }
@@ -96,8 +90,5 @@ public class Comments {
         return "Comments{" + "Id=" + id + ", dtae=" + date + ", time=" + time + ", type=" + type + ", comment=" + description + ", custId=" + custId  + '}';
     }
 
-    public void setDesc(String string) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
 }

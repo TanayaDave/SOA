@@ -86,10 +86,4 @@ public class DriverParser {
 
         transc.commit();
     }
-
-    public static void main(String argv[]) {
-        DriverParser driver = new DriverParser();
-        driver.driverParse();
-    }
-
 }

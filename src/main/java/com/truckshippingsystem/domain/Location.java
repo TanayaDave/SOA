@@ -5,24 +5,51 @@
  */
 package com.truckshippingsystem.domain;
 
+import javax.persistence.Embedded;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author user
  */
-
+@Entity
 public class Location {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int locId;
     private String locName;
     private int custId;
-    private int locCode;
-   
+    private String locCode;
+    @Embedded
+    private Address address;
+    @Embedded
+    private ContactDetails cotactDetails;
 
-    public int getLocCode() {
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    public ContactDetails getCotactDetails() {
+        return cotactDetails;
+    }
+
+    public void setCotactDetails(ContactDetails cotactDetails) {
+        this.cotactDetails = cotactDetails;
+    }
+
+    public String getLocCode() {
         return locCode;
     }
 
-    public void setLocCode(int locCode) {
+    public void setLocCode(String locCode) {
         this.locCode = locCode;
     }
 
@@ -49,5 +76,5 @@ public class Location {
     public void setCustId(int custId) {
         this.custId = custId;
     }
-    
+
 }

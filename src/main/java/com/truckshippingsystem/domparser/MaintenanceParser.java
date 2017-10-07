@@ -15,9 +15,7 @@ import org.w3c.dom.Element;
 import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
 
@@ -98,10 +96,4 @@ public class MaintenanceParser {
         
         transc.commit();
     }
-
-    public static void main(String argv[]) {
-        MaintenanceParser maintain = new MaintenanceParser();
-        maintain.maintenanceParse();
-    }
-
 }
