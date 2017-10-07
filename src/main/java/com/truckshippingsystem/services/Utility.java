@@ -29,6 +29,17 @@ public class Utility {
         }
         return formattedDate;
     }
+    
+    public static Date formatTime(String date) {
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yy:HH:mm:SS");
+        Date formattedDate = new Date();
+        try {
+            formattedDate = sdf.parse(date);
+        } catch (ParseException e) {
+            System.out.println(e.getStackTrace());
+        }
+        return formattedDate;
+    }
 
     public static SAXParser getSAXParserObject() throws ParserConfigurationException,SAXException{
         SAXParserFactory factory = SAXParserFactory.newInstance();

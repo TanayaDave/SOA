@@ -5,6 +5,8 @@
     <class>com.truckshippingsystem.domain.Employee</class>
     <class>com.truckshippingsystem.domain.Customer</class>
     <class>com.truckshippingsystem.domain.Order</class>
+    <class>com.truckshippingsystem.domain.Comments</class>
+    <class>com.truckshippingsystem.domain.Ticket</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/itmd566?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="itmd566"/>
