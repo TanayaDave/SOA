@@ -8,6 +8,7 @@ package com.truckshippingsystem.parser;
 import com.truckshippingsystem.domparser.DriverParser;
 import com.truckshippingsystem.domparser.InvoiceParser;
 import com.truckshippingsystem.domparser.MaintenanceParser;
+import com.truckshippingsystem.domparser.PaymentParser;
 import com.truckshippingsystem.domparser.PricingParser;
 import com.truckshippingsystem.domparser.TransactionParser;
 import com.truckshippingsystem.domparser.TruckParser;
@@ -48,5 +49,8 @@ public class ParserMainClass {
         
         InvoiceParser invoice=new InvoiceParser();
         invoice.invoiceParse();
+        
+        PaymentParser paymentParser=new PaymentParser();
+        paymentParser.paymentParse();
     }
 }

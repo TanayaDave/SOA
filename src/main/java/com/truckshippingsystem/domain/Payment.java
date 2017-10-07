@@ -9,9 +9,21 @@ package com.truckshippingsystem.domain;
  *
  * @author user
  */
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
+/**
+ *
+ * @author user
+ */
+@Entity
+@Table(name = "payment")
 public class Payment {
-    
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int payId;
     private int orderId;
     private double amount;
@@ -74,6 +86,11 @@ public class Payment {
 
     public void setExpDate(String expDate) {
         this.expDate = expDate;
+    }
+
+    @Override
+    public String toString() {
+        return "Payment{" + "payId=" + payId + ", orderId=" + orderId + ", amount=" + amount + ", date=" + date + ", payType=" + payType + ", cardNo=" + cardNo + ", expDate=" + expDate + '}';
     }
     
 }

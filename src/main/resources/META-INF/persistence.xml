@@ -16,6 +16,7 @@
     <class>com.truckshippingsystem.domain.Truck</class>
     <class>com.truckshippingsystem.domain.Vehicles</class>
     <class>com.truckshippingsystem.domain.Invoice</class>
+    <class>com.truckshippingsystem.domain.Payment</class>
     <properties>
       <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/itmd566?zeroDateTimeBehavior=convertToNull"/>
       <property name="javax.persistence.jdbc.user" value="itmd566"/>
