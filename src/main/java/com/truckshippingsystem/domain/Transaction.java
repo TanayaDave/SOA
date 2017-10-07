@@ -5,19 +5,33 @@
  */
 package com.truckshippingsystem.domain;
 
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 /**
  *
  * @author user
  */
+@Entity
+@Table(name = "transaction")
 
 public class Transaction {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int tranId;
     private int orderId;
     private int priceId;
-    private String date;
-    private int qnty;
-    private int unitPrice;
+    private String employeeId;
+    @Temporal(TemporalType.DATE)
+    private Date date;
+    private double amount;
 
     public int getTranId() {
         return tranId;
@@ -43,28 +57,33 @@ public class Transaction {
         this.priceId = priceId;
     }
 
-    public String getDate() {
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    public void setEmployeeId(String employeeId) {
+        this.employeeId = employeeId;
+    }
+
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public int getQnty() {
-        return qnty;
+    public double getAmount() {
+        return amount;
     }
 
-    public void setQnty(int qnty) {
-        this.qnty = qnty;
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
-    public int getUnitPrice() {
-        return unitPrice;
+    @Override
+    public String toString() {
+        return "Transaction{" + "tranId=" + tranId + ", orderId=" + orderId + ", priceId=" + priceId + ", employeeId=" + employeeId + ", date=" + date + ", amount=" + amount + '}';
     }
 
-    public void setUnitPrice(int unitPrice) {
-        this.unitPrice = unitPrice;
-    }
-    
 }

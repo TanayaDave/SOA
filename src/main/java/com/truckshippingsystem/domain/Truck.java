@@ -9,10 +9,23 @@ package com.truckshippingsystem.domain;
  *
  * @author user
  */
+import java.util.ArrayList;
+import java.util.List;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "truck")
 public class Truck {
-    
-    private int truckId;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    private int id;
     private String vin;
     private String color;
     private int capacity;
@@ -21,14 +34,35 @@ public class Truck {
     private String make;
     private String model;
     private String year;
-    private int driverId;
-
-    public int getTruckId() {
-        return truckId;
+    @OneToMany(mappedBy = "truck")
+    private List<Drivers> drivers = new ArrayList<>();
+   
+    public void addDrivers(Drivers a) {
+        this.drivers.add(a);
+        a.setTruck(this);
     }
 
-    public void setTruckId(int truckId) {
-        this.truckId = truckId;
+    public Truck() {
+    }
+
+    public Truck(int id, String vin, String color, int capacity, String type, String licPlateNo, String make, String model, String year) {
+        this.id = id;
+        this.vin = vin;
+        this.color = color;
+        this.capacity = capacity;
+        this.type = type;
+        this.licPlateNo = licPlateNo;
+        this.make = make;
+        this.model = model;
+        this.year = year;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getVin() {
@@ -95,12 +129,17 @@ public class Truck {
         this.year = year;
     }
 
-    public int getDriverId() {
-        return driverId;
+    public List<Drivers> getDrivers() {
+        return drivers;
     }
 
-    public void setDriverId(int driverId) {
-        this.driverId = driverId;
+    public void setDrivers(List<Drivers> drivers) {
+        this.drivers = drivers;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Truck{" + "id=" + id + ", vin=" + vin + ", color=" + color + ", capacity=" + capacity + ", type=" + type + ", licPlateNo=" + licPlateNo + ", make=" + make + ", model=" + model + ", year=" + year + ", drivers=" + drivers + '}';
+    }
+
 }

@@ -5,34 +5,61 @@
  */
 package com.truckshippingsystem.domain;
 
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 /**
  *
- * @author user
+ * @author Manish Vishwakarma
  */
-
+@Entity
+@Table(name = "maintenance")
 public class Maintenance {
-    
-    private int mainId;
-    private String date;
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int id;
+    @Temporal(TemporalType.DATE)
+    private Date date1;
     private double cost;
+    @Column(name = "description")
     private String desc;
-    private int truckId;
     private String status;
 
-    public int getMainId() {
-        return mainId;
+    public Maintenance() {
     }
 
-    public void setMainId(int mainId) {
-        this.mainId = mainId;
+    public Maintenance(int id, Date date, double cost, String desc, String status, Truck truck) {
+        this.id = id;
+        this.date1 = date;
+        this.cost = cost;
+        this.desc = desc;
+        this.status = status;
     }
 
-    public String getDate() {
-        return date;
+    public int getId() {
+        return id;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public Date getDate1() {
+        return date1;
+    }
+
+    public void setDate1(Date date1) {
+        this.date1 = date1;
     }
 
     public double getCost() {
@@ -51,14 +78,6 @@ public class Maintenance {
         this.desc = desc;
     }
 
-    public int getTruckId() {
-        return truckId;
-    }
-
-    public void setTruckId(int truckId) {
-        this.truckId = truckId;
-    }
-
     public String getStatus() {
         return status;
     }
@@ -66,6 +85,10 @@ public class Maintenance {
     public void setStatus(String status) {
         this.status = status;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Maintenance{" + "id=" + id + ", date1=" + date1 + ", cost=" + cost + ", desc=" + desc + ", status=" + status + '}';
+    }
+
 }

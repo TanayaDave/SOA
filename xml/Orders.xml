@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Orders xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Order id="001">
+		<CustId>001</CustId>
+		<EmployeeId>001</EmployeeId>
+		<OrderDate>01-02-2017</OrderDate>
+		<UnitCost>18000</UnitCost>
+		<Qnty>2</Qnty>
+		<LocId>001</LocId>
+		<TruckId>001</TruckId>
+		<TotalAmount>360000</TotalAmount>	
+	</Order>
+	<Order id="002">
+		<CustId>001</CustId>
+		<EmployeeId>001</EmployeeId>
+		<OrderDate>01-02-2017</OrderDate>
+		<UnitCost>8000</UnitCost>
+		<Qnty>3</Qnty>
+		<LocId>001</LocId>
+		<TruckId>001</TruckId>
+		<TotalAmount>240000</TotalAmount>	
+	</Order>
+</Orders>

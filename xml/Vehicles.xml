@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Vehicles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Vehicle id="001">
+        <VehicleMake>BMW</VehicleMake>
+        <Vin>JTDKDTB39E1078932</Vin>
+        <Model>S series</Model>
+        <Color>Blue</Color>
+        <Year>2009</Year>               
+        <LicensePlateNo>952 3837</LicensePlateNo>
+        <CustId>001</CustId>
+        <OrderId>001</OrderId>
+	</Vehicle>
+	<Vehicle id="002">
+        <VehicleMake>Mercedes</VehicleMake>
+        <Vin>4F4CR16X2RTM02411</Vin>
+        <Model>X series</Model>
+        <Color>Pink</Color>
+        <Year>2015</Year>               
+        <LicensePlateNo>982 3837</LicensePlateNo>
+        <CustId>002</CustId>
+        <OrderId>002</OrderId>
+	</Vehicle>
+</Vehicles>

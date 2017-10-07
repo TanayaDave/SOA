@@ -5,18 +5,28 @@
  */
 package com.truckshippingsystem.domain;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  *
  * @author user
  */
+@Entity
+@Table(name = "pricing")
 
 public class Pricing {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int priceId;
     private int locCodeFrom;
     private int locCodeTo;
-    private int locIdFrom;
-    private int locIdTo;
+    private String locIdFrom;
+    private String locIdTo;
     private String locNameFrom;
     private String locNameTo;
     private int custId;
@@ -45,19 +55,19 @@ public class Pricing {
         this.locCodeTo = locCodeTo;
     }
 
-    public int getLocIdFrom() {
+    public String getLocIdFrom() {
         return locIdFrom;
     }
 
-    public void setLocIdFrom(int locIdFrom) {
+    public void setLocIdFrom(String locIdFrom) {
         this.locIdFrom = locIdFrom;
     }
 
-    public int getLocIdTo() {
+    public String getLocIdTo() {
         return locIdTo;
     }
 
-    public void setLocIdTo(int locIdTo) {
+    public void setLocIdTo(String locIdTo) {
         this.locIdTo = locIdTo;
     }
 
@@ -84,6 +94,11 @@ public class Pricing {
     public void setCustId(int custId) {
         this.custId = custId;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Pricing{" + "priceId=" + priceId + ", locCodeFrom=" + locCodeFrom + ", locCodeTo=" + locCodeTo + ", locIdFrom=" + locIdFrom + ", locIdTo=" + locIdTo + ", locNameFrom=" + locNameFrom + ", locNameTo=" + locNameTo + ", custId=" + custId + '}';
+    }
+
+  
 }

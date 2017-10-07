@@ -14,9 +14,18 @@ import javax.persistence.Persistence;
  * @author shrikantjesu
  */
 public class EntityWrapperService {
-    public static EntityManager createEntityManager(){
-    EntityManagerFactory emf = Persistence.createEntityManagerFactory("itmd566PU");
-            EntityManager em = emf.createEntityManager();
-            return em;
+
+    private static EntityManagerFactory emf;
+    private static EntityManager em;
+
+    public static EntityManager createEntityManager() {
+        emf = Persistence.createEntityManagerFactory("itmd566PU");
+        em = emf.createEntityManager();
+        return em;
+    }
+
+    public static void closeEntityManager() {
+        em.close();
+        emf.close();
     }
 }

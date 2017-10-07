@@ -5,13 +5,25 @@
  */
 package com.truckshippingsystem.domain;
 
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 /**
  *
  * @author user
  */
-
+@Entity
+@Table(name = "vehicle")
 public class Vehicles {
-    
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int vehicleId;
     private String make;
     private String vin;
@@ -20,7 +32,7 @@ public class Vehicles {
     private String color;
     private String licPlateNo;
     private int custId;
-    private int truckId;
+    private int orderId;
 
     public int getVehicleId() {
         return vehicleId;
@@ -86,12 +98,17 @@ public class Vehicles {
         this.custId = custId;
     }
 
-    public int getTruckId() {
-        return truckId;
+    public int getOrderId() {
+        return orderId;
     }
 
-    public void setTruckId(int truckId) {
-        this.truckId = truckId;
+    public void setOrderId(int orderId) {
+        this.orderId = orderId;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Vehicles{" + "vehicleId=" + vehicleId + ", make=" + make + ", vin=" + vin + ", model=" + model + ", year=" + year + ", color=" + color + ", licPlateNo=" + licPlateNo + ", custId=" + custId + '}';
+    }
+
 }
