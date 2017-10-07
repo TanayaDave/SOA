@@ -5,43 +5,67 @@
  */
 package com.truckshippingsystem.domain;
 
+import java.sql.Time;
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlAttribute;
+
 /**
  *
  * @author user
  */
-
+@Entity
 public class Comments {
     
-    private int commentId;
-    private String date;
-    private String time;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+    
+    @Temporal(TemporalType.DATE)
+    private Date date;
+    
+    @Temporal(TemporalType.DATE)
+    private Date time;
+
+    
     private String type;
-    private String comment;
+    private String description;
     private int custId;
 
-    public int getCommentId() {
-        return commentId;
+   
+     @XmlAttribute
+    public Integer getId() {
+        return id;
     }
 
-    public void setCommentId(int commentId) {
-        this.commentId = commentId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public String getTime() {
+    public Date getTime() {
         return time;
     }
 
-    public void setTime(String time) {
+    public void setTime(Date time) {
         this.time = time;
     }
+    
+    
+
+   
 
     public String getType() {
         return type;
@@ -51,12 +75,12 @@ public class Comments {
         this.type = type;
     }
 
-    public String getComment() {
-        return comment;
+    public String getDescription() {
+        return description;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getCustId() {
@@ -67,6 +91,13 @@ public class Comments {
         this.custId = custId;
     }
     
-    
+     @Override
+    public String toString() {
+        return "Comments{" + "Id=" + id + ", dtae=" + date + ", time=" + time + ", type=" + type + ", comment=" + description + ", custId=" + custId  + '}';
+    }
+
+    public void setDesc(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
 }

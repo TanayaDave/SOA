@@ -11,6 +11,8 @@ package com.truckshippingsystem.parser;
  */
 public class SAXParserMainClass {
     public static void main(String[] args) {
-        EmployeeParser.ParseEmployee();
+       // EmployeeParser.ParseEmployee();
+       // CommentParser.ParseComment();
+        TicketParser.ParseTicket();
     }
 }

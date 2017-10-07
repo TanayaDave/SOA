@@ -5,27 +5,50 @@
  */
 package com.truckshippingsystem.domain;
 
+import java.util.Date;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+import javax.xml.bind.annotation.XmlAttribute;
+
 /**
  *
  * @author user
  */
-
+@Entity
 public class Ticket {
     
-    private int ticketId;
+    
+     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+       
     private int driverId;
-    private String date;
+    
+    @Temporal(TemporalType.DATE)
+    private Date date;
+    
     private double fine;
+    
+    @Column(name = "ticketdescription")
     private String desc;
+    
     private boolean isPaid;
 
-    public int getTicketId() {
-        return ticketId;
+    @XmlAttribute
+    public Integer getId() {
+        return id;
     }
 
-    public void setTicketId(int ticketId) {
-        this.ticketId = ticketId;
+    public void setId(Integer id) {
+        this.id = id;
     }
+
+    
 
     public int getDriverId() {
         return driverId;
@@ -35,13 +58,15 @@ public class Ticket {
         this.driverId = driverId;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
+
+   
 
     public double getFine() {
         return fine;
@@ -65,6 +90,11 @@ public class Ticket {
 
     public void setIsPaid(boolean isPaid) {
         this.isPaid = isPaid;
+    }
+    
+      @Override
+    public String toString() {
+        return "Tickets{" + "Id=" + id + ", driver id = " + driverId + ", date=" + date + ", fine=" + fine + ", desc=" + desc + ", isPaid=" + isPaid +  '}';
     }
     
 }
