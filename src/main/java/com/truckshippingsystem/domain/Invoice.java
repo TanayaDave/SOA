@@ -5,26 +5,43 @@
  */
 package com.truckshippingsystem.domain;
 
+import java.util.Date;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
 /**
  *
  * @author user
  */
 
+@Entity
+@Table(name = "invoice")
 public class Invoice {
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int invoiceId;
     private int orderId;
     private int custId;
+    private int locId;
     private double total;
-    private String date;
+     @Temporal(TemporalType.DATE)
+    private Date date;
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
+
+   
 
     public int getInvoiceId() {
         return invoiceId;
@@ -57,6 +74,20 @@ public class Invoice {
     public void setTotal(double total) {
         this.total = total;
     }
+
+    public int getLocId() {
+        return locId;
+    }
+
+    public void setLocId(int locId) {
+        this.locId = locId;
+    }
+
+    @Override
+    public String toString() {
+        return "Invoice{" + "Invoice Id=" + invoiceId + ", orderId=" + orderId + ", Cust Id=" + custId + ", LocId=" + locId + ", date=" + date + ", total=" + total + '}';
+    }
+    
     
     
 }
