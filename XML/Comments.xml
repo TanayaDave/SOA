@@ -4,14 +4,14 @@
 		<Date>10-05-2017</Date>
 		<Time>01:05:00</Time>
 		<Type>Feedback</Type>
-		<Description>Best services</Description>
+		<Comment>Best services</Comment>
 		<CustId>001</CustId>
 	</Comment>
 	<Comment id="002">
 		<Date>10-05-2017</Date>
 		<Time>01:15:00</Time>
 		<Type>Complaint</Type>
-		<Description>Late Delivery</Description>
+		<Comment>Late Delivery</Comment>
 		<CustId>002</CustId>
 	</Comment>
 </Comments>

@@ -6,6 +6,7 @@
 package com.truckshippingsystem.parser;
 
 import com.truckshippingsystem.domparser.DriverParser;
+import com.truckshippingsystem.domparser.InvoiceParser;
 import com.truckshippingsystem.domparser.MaintenanceParser;
 import com.truckshippingsystem.domparser.PricingParser;
 import com.truckshippingsystem.domparser.TransactionParser;
@@ -16,7 +17,7 @@ import com.truckshippingsystem.domparser.VehicleParser;
  *
  * @author shrikantjesu
  */
-public class SAXParserMainClass {
+public class ParserMainClass {
 
     public static void main(String[] args) {
         EmployeeParser.ParseEmployee();
@@ -44,5 +45,8 @@ public class SAXParserMainClass {
 
         VehicleParser vehicle = new VehicleParser();
         vehicle.vehicleParse();
+        
+        InvoiceParser invoice=new InvoiceParser();
+        invoice.invoiceParse();
     }
 }

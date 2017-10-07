@@ -1,21 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Tickets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<Ticket id="001">
-		<DriverId>001</DriverId>
 		<Date>02-04-2016</Date>
 		<Fine>130</Fine>
 		<Desc>Overspeeding</Desc>
 		<isPaid>true</isPaid>
 	</Ticket>
 	<Ticket id="002">
-		<DriverId>001</DriverId>
 		<Date>02-07-2016</Date>
 		<Fine>520</Fine>
 		<Desc>Overspeeding</Desc>
 		<isPaid>true</isPaid>
 	</Ticket>
 	<Ticket id="002">
-		<DriverId>002</DriverId>
 		<Date>02-04-2017</Date>
 		<Fine>330</Fine>
 		<Desc>Signal breaking</Desc>
