@@ -5,7 +5,7 @@ package com.truckshippingsystem.domparser;
  * @author Manish Vishwakarma
  */
 import com.truckshippingsystem.domain.Payment;
-import com.truckshippingsystem.services.EntityWrapperService;
+import com.truckshippingsystem.utility.EntityWrapperService;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;

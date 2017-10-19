@@ -10,8 +10,8 @@ package com.truckshippingsystem.parser;
  * @author user
  */
 import com.truckshippingsystem.domain.Comments;
-import com.truckshippingsystem.services.EntityWrapperService;
-import com.truckshippingsystem.services.Utility;
+import com.truckshippingsystem.utility.EntityWrapperService;
+import com.truckshippingsystem.utility.Utility;
 import java.io.File;
 import java.io.IOException;
 import javax.persistence.EntityManager;

@@ -10,7 +10,7 @@ package com.truckshippingsystem.domparser;
  * @author user
  */
 import com.truckshippingsystem.domain.Invoice;
-import com.truckshippingsystem.services.EntityWrapperService;
+import com.truckshippingsystem.utility.EntityWrapperService;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;

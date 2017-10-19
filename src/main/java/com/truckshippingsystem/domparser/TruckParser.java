@@ -6,7 +6,7 @@ package com.truckshippingsystem.domparser;
  */
 import com.truckshippingsystem.domain.Drivers;
 import com.truckshippingsystem.domain.Truck;
-import com.truckshippingsystem.services.EntityWrapperService;
+import com.truckshippingsystem.utility.EntityWrapperService;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.DocumentBuilder;
 import org.w3c.dom.Document;

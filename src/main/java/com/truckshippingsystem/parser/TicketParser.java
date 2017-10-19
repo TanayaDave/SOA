@@ -13,8 +13,8 @@ package com.truckshippingsystem.parser;
  */
 
 import com.truckshippingsystem.domain.Ticket;
-import com.truckshippingsystem.services.EntityWrapperService;
-import com.truckshippingsystem.services.Utility;
+import com.truckshippingsystem.utility.EntityWrapperService;
+import com.truckshippingsystem.utility.Utility;
 import java.io.File;
 import java.io.IOException;
 import java.sql.Time;
